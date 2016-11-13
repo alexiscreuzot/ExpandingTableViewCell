@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -48,7 +49,34 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nht-4Q-2AM" id="eSi-Hx-5fb">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMZ-u4-PbS">
+                                                    <rect key="frame" x="20" y="18" width="335" height="32.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwF-I7-VVU">
+                                                    <rect key="frame" x="20" y="60.5" width="335" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.0" alpha="0.39621682363013699" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="zwF-I7-VVU" secondAttribute="bottom" constant="10" id="6YM-lF-CWV"/>
+                                                <constraint firstItem="zwF-I7-VVU" firstAttribute="leading" secondItem="eSi-Hx-5fb" secondAttribute="leading" constant="20" id="9jS-yo-XKD"/>
+                                                <constraint firstAttribute="trailing" secondItem="zwF-I7-VVU" secondAttribute="trailing" constant="20" id="AEY-TZ-5bI"/>
+                                                <constraint firstItem="zwF-I7-VVU" firstAttribute="top" secondItem="uMZ-u4-PbS" secondAttribute="bottom" constant="10" id="i5d-k5-7nK"/>
+                                                <constraint firstAttribute="trailing" secondItem="uMZ-u4-PbS" secondAttribute="trailing" constant="20" id="mMM-ju-qaf"/>
+                                                <constraint firstItem="uMZ-u4-PbS" firstAttribute="leading" secondItem="eSi-Hx-5fb" secondAttribute="leading" constant="20" id="ySi-fg-IHO"/>
+                                                <constraint firstItem="uMZ-u4-PbS" firstAttribute="top" secondItem="eSi-Hx-5fb" secondAttribute="topMargin" constant="10" id="zEa-dN-Ndz"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="subtitleLabel" destination="zwF-I7-VVU" id="GEw-8U-MMx"/>
+                                            <outlet property="titleLabel" destination="uMZ-u4-PbS" id="AsX-tO-Kke"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -69,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-532" y="-25"/>
+            <point key="canvasLocation" x="-532" y="-25.637181409295355"/>
         </scene>
     </scenes>
 </document>
